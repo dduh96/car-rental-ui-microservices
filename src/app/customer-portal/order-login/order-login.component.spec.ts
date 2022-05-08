@@ -11,7 +11,7 @@ describe('OrderLoginComponent', () => {
   let component: OrderLoginComponent;
   let fixture: ComponentFixture<OrderLoginComponent>;
 
-  let matDialogData: Order = buildOrder();
+  let matDialogData = buildOrder();
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({

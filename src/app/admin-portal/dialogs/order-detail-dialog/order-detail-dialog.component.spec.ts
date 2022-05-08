@@ -11,7 +11,7 @@ import {Car} from "../../../model/car";
 describe('OrderDetailDialogComponent', () => {
   let component: OrderDetailDialogComponent;
   let fixture: ComponentFixture<OrderDetailDialogComponent>;
-  let matDialogData: Order = buildOrder();
+  let matDialogData = buildOrder();
   const mockDialog = {
     close: () => {}
   }

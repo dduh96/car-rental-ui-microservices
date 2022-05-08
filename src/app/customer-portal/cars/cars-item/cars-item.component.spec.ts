@@ -7,6 +7,7 @@ import {Car} from "../../../model/car";
 import {CarService} from "../../../api/car.service";
 import {InputSearch} from "../InputSearch";
 import {Currency} from "../../../model/currency";
+import {buildCar} from "../../../mock/order-mock/buildCar";
 
 describe('CarsItemComponent', () => {
   let component: CarsItemComponent;
@@ -24,26 +25,7 @@ describe('CarsItemComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(CarsItemComponent);
     component = fixture.componentInstance;
-    const mockCar: Car = {
-      car_id: 2,
-      car_status: Car.CarStatusEnum.Repair,
-      chassis_number: "12i-23423412",
-      manufacturer: "VW",
-      construction_year: "2009",
-      color: "black",
-      model: "Golf",
-      model_series: "7",
-      engine_fuel: "Diesel",
-      engine_fuel_consumption: 8,
-      engine_performance: 12,
-      engine_type: "type A",
-      gear_type: "Automatic",
-      adblue: true,
-      seats: 6,
-      price: 200,
-      currency_symbol: Car.CurrencySymbolEnum.Usd,
-      picture_link: "https://i.pinimg.com/originals/bf/07/14/bf07144f9a02225c7e058aa8d958d2af.png"
-    }
+    const mockCar = buildCar()
     component.car = mockCar;
 
     const mockInputSearch: InputSearch = {

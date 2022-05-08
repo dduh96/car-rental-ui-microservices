@@ -17,7 +17,7 @@ describe('BookingConfirmationComponent', () => {
   let fixture: ComponentFixture<BookingConfirmationComponent>;
   let service:OrderService;
   let activatedRoute: ActivatedRoute;
-  let order: Order = buildOrder();
+  let order = buildOrder();
   const mockHttp = {
     request: jasmine.createSpy('request')
   };
