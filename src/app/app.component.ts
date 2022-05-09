@@ -28,16 +28,16 @@ export class AppComponent {
   }
 
   openOrderDialog(){
-    this.dialog.open(OrderLoginComponent).afterClosed().subscribe( res => {
-      if (res)
-        this.pageReload();
-    });
+    this.dialog.open(OrderLoginComponent);
   }
 
   openAdminDialog(){
     this.dialog.open(AdminLoginComponent).afterClosed().subscribe( res => {
       if (res)
-        this.pageReload();
+        this.router.navigate(['/']).then(_ => {
+          this.pageReload();
+        });
+
     });
   }
 
@@ -49,7 +49,7 @@ export class AppComponent {
   }
 
   pageReload() {
-    window.location.reload();
+   window.location.reload();
   }
 
 }
